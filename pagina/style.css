@@ -1,19 +1,75 @@
-div{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+div.menu {
     width: 100vw;
     height: 40px;
     background: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
-
-a[href="http://127.0.0.1:5500/pagina/index.html"]{
+.links {
+    margin: 20px 0;
+    width: 100%; 
+}
+.link {
+    display: block;
     color: red;
     text-decoration: none;
+    font-size: 18px;
+    margin: 5px auto; 
+    text-align: center;
+}
+#link-lamborghini {
+    display: none; 
 }
 @media (max-width: 400px) {
-    div{
-        width: 100vw;
-        height: 40px;
+    div.menu {
         background: orange;
-    
+        color: transparent; 
     }
-
+    div.menu::after {
+        content: "LAMBORGHINI."; 
+        color:white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px; 
+    }
+    .links #link-ferrari {
+        display: none; 
+    }
+    .links #link-lamborghini {
+        display: block; 
+    }
+    .image-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%; 
+    }
+    #image1 {
+        width: 100%; 
+        height: auto; 
+        content: url('https://i.pinimg.com/736x/b0/a0/71/b0a071a8ddacf7ac072b765dcd8b6089.jpg');
+    }
+    #image2 {
+        width: 100%; 
+        height: auto; 
+        content: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/2023/03_29_revuelto/gate_models_s_02_m.jpg');
+    }
 }
