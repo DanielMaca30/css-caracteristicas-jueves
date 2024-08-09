@@ -1,0 +1,19 @@
+div{
+    width: 100vw;
+    height: 40px;
+    background: red;
+}
+
+a[href="http://127.0.0.1:5500/pagina/index.html"]{
+    color: red;
+    text-decoration: none;
+}
+@media (max-width: 400px) {
+    div{
+        width: 100vw;
+        height: 40px;
+        background: orange;
+    
+    }
+
+}
